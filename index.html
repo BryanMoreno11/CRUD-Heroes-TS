@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="./src/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + TS</title>
+  </head>
+  <body>
+
+    <div class="container">
+      <button id="btn-add" class="btn-add">Agregar</button>
+      <h2>Lista de Superheroes</h2>
+      <div class="table-container">
+          <table id="tabla-H">
+              <thead>
+                  <tr>
+                    <th>Imagen</th>
+                      <th>Codigo</th>
+                      <th>Nombre</th>
+                      <th>Edad</th>
+                      <th>Ciudad</th>
+                      <th>Acciones</th>
+                  </tr>
+              </thead>
+              <tbody  id="lista-h">
+                  <tr>
+                   
+                      <td>1</td>
+                      <td>Batman</td>
+                      <td>40</td>
+                      <td>Gotica</td>
+                      
+                  </tr>
+                  <tr>
+                      <td>2</td>
+                      <td>Spiderman</td>
+                      <td>20</td>
+                      <td>New York</td>
+                      <td class="action-buttons">
+                          <button id="btn" class="editar">Editar</button>
+                          <button id="btn" class="eliminar">Eliminar</button>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td>3</td>
+                      <td>Superman</td>
+                      <td>35</td>
+                      <td>Metropolis</td>
+                      <td class="action-buttons">
+                          <button class="edit-button">Editar</button>
+                          <button class="delete-button">Eliminar</button>
+                      </td>
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+  </div>
+
+  <!-- Modal Container -->
+<div id="container-form" class="modal container-form">
+    <div class="modal-content">
+      <span class="close" id="close-modal">&times;</span>
+      <h2>Formulario</h2>
+      <form id="modal-form">
+        <div class="form-group">
+          <label for="codigo">Código</label>
+          <input type="number" min="1" id="codigo" placeholder="Ingrese el código" required />
+        </div>
+        <div class="form-group">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" placeholder="Ingrese el nombre" required />
+        </div>
+        <div class="form-group">
+          <label for="edad">Edad</label>
+          <input type="number" id="edad" placeholder="Ingrese la edad" required />
+        </div>
+        <div class="form-group">
+          <label for="ciudad">Ciudad</label>
+          <input type="text" id="ciudad" placeholder="Ingrese la ciudad" required />
+        </div>
+       
+
+        <div class="form-group">
+            <label for="inputImage">Imagen</label>
+            <input type="file" accept="image/*"  id="inputImage" />
+        </div>
+
+
+        <div id="previewImage">
+          <img id="imagenPrevia"  class="vistaPrevia" src="" alt="">
+        </div>
+        
+          <button type="submit" id="btn" class="save-btn">Guardar</button>
+      </form>
+    </div>
+  </div>
+  
+   
+
+
+    
+  
+
+
+
+    <script type="module" src="/src/index.ts"></script>
+  </body>
+</html>

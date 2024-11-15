@@ -1,0 +1,214 @@
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  
+}
+
+.container {
+ 
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  color: white;
+}
+
+.container h2 {
+  font-size: 24px;
+  margin: 0 0 20px;
+  text-align: center;
+}
+
+/*Estilos para la tabla*/
+
+.table-container {
+  overflow-x: auto; /* Para que sea responsive */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  overflow: hidden;
+}
+
+table th, table td {
+  padding: 15px;
+  text-align: left;
+}
+
+table th {
+  background-color: rgb(20, 18, 18);
+  color: white;
+  font-weight: bold;
+}
+
+table td {
+  color: black;
+}
+
+thead tr th:first-child {
+  width: 50px;
+}
+
+tbody tr{
+  border-bottom: 1px solid black;
+}
+tbody tr:last-child {
+  border-bottom: none;
+}
+
+
+/* Botón de agregar */
+.btn-add {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+/* Estilos para botones de acción */
+.action-buttons .editar, .action-buttons .eliminar {
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.editar {
+  background-color: #ffcc00;
+  color: black;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+.editar:hover {
+  background-color: #e6b800;
+  transform: scale(1.05);
+}
+
+.eliminar {
+  background-color: #ff4d4d;
+  color: white;
+}
+
+.eliminar:hover {
+  background-color: #e60000;
+  transform: scale(1.05);
+}
+/*Estilos del modal*/
+/* General Modal Styles */
+.modal {
+  display: none; /* Se oculta por defecto */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro */
+  opacity: 0; /* Inicialmente no visible */
+  pointer-events: none; /* No interactuable cuando está cerrado */
+  transition: opacity 0.3s ease; /* Transición suave */
+}
+
+/* Mostrar el modal */
+.modal.active {
+  display: block; /* Mostrar modal */
+  opacity: 1; /* Hacerlo visible */
+  pointer-events: auto; /* Interactuable cuando está abierto */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fff;
+  margin: 20px auto ;
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  position: relative;
+}
+
+/* Close Button */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Form Styling */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+
+
+.save-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.save-btn {
+  background-color: #4CAF50;
+  color: white;
+}
+
+/* Hover Effects */
+.save-btn:hover {
+  background-color: #45a049;
+}
+
+/*Estilos imagen*/
+img{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+#previewImage{
+  margin-bottom: 5px;
+}
+
+
+.vistaPrevia{
+  width: 250px;
+  height: 250px;
+  border-radius: 0%;
+}
+
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .modal-content {
+    width: 90%;
+  }
+}
