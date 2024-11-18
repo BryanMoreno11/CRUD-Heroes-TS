@@ -1,0 +1,62 @@
+/* Estilos generales del formulario */
+.container-form {
+    margin: 50px auto;
+    max-width: 700px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.form-content {
+    text-align: center;
+}
+
+/* Estilo de los grupos de formulario */
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="file"] {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.save-btn {
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.save-btn:hover {
+    background-color: #4cae4c;
+}
+
+#previewImage {
+   
+    margin-top: 15px;
+    text-align: center;
+}
+
+.vistaPrevia {
+   width: 300px;
+   height: 300px;
+    border-radius: 5px;
+    margin-top: 10px;
+}

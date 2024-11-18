@@ -3,9 +3,9 @@ export class Heroe{
     Nombre:string;
     Edad:number;
     Ciudad:string;
-    Imagen?:string;
+    Imagen:string;
 
-    constructor(Codigo:number,Nombre:string,Edad:number,Ciudad:string, Imagen?:string){
+    constructor(Codigo:number,Nombre:string,Edad:number,Ciudad:string, Imagen:string){
         this.Codigo=Codigo;
         this.Nombre=Nombre;
         this.Edad=Edad;

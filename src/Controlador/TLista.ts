@@ -26,6 +26,16 @@ let ListaHeroes: Heroe[] = [
   },
 ];
 
+cargarLocalStorage();
+
+
+function cargarLocalStorage(){
+  let storage= localStorage.getItem("heroes");
+  if(storage){
+    ListaHeroes= JSON.parse(storage);
+  }
+}
+
 // Funcion insertar heroes
 export function Insertar(imagen:string) {
   let img:string="";
@@ -45,7 +55,8 @@ export function Insertar(imagen:string) {
   if(validaciones(cod,nom,eda,ciu,img) &&  verificarCodigoRepetido(cod)==false){
     const op = new Heroe(cod, nom, eda, ciu,img);
     ListaHeroes.push(op);
-    Listar();
+    //Listar();
+    localStorage.setItem("heroes",JSON.stringify(ListaHeroes));
     return true;
   }
   return false;
@@ -75,7 +86,8 @@ export function Editar(codigo: number, imagen:string) {
   let codigoRepetido= verificarCodigoRepetido(cod,index);
   if (index !== -1 && validaciones(cod,nom,eda,ciu,img) && codigoRepetido==false) {
     ListaHeroes[index] = new Heroe(cod, nom, eda, ciu, img);
-    Listar();
+    localStorage.setItem("heroes",JSON.stringify(ListaHeroes));
+    //Listar();
     return true;
   }
   return false;
@@ -87,7 +99,7 @@ export function Eliminar(codigo: number) {
   const index = ListaHeroes.findIndex((op) => op.Codigo === codigo);
   if (index >= 0) {
     ListaHeroes.splice(index, 1);
-  }
+    localStorage.setItem("heroes",JSON.stringify(ListaHeroes));  }
   Listar();
 }
 
@@ -119,6 +131,16 @@ export function Listar() {
   }
   lista.innerHTML = lis;
 }
+
+
+export function getHeroe(codigo: number) {
+  let heroe = ListaHeroes.find((heroe) => heroe.Codigo === codigo);
+  if(heroe){
+    return heroe;
+  }
+  return null;
+}
+
 
  function verificarCodigoRepetido(codigo: number,index?: number) {
  
