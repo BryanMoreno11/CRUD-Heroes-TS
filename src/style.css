@@ -123,74 +123,6 @@ tbody tr:last-child {
   transition: opacity 0.3s ease; /* Transición suave */
 }
 
-/* Mostrar el modal */
-.modal.active {
-  display: block; /* Mostrar modal */
-  opacity: 1; /* Hacerlo visible */
-  pointer-events: auto; /* Interactuable cuando está abierto */
-}
-
-/* Modal Content */
-.modal-content {
-  background-color: #fff;
-  margin: 20px auto ;
-  padding: 20px;
-  border-radius: 8px;
-  width: 600px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  text-align: center;
-  position: relative;
-}
-
-/* Close Button */
-.close {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 24px;
-  cursor: pointer;
-  color: #333;
-}
-
-/* Form Styling */
-.form-group {
-  margin-bottom: 15px;
-}
-
-.form-group label {
-  display: block;
-  font-size: 14px;
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-.form-group input {
-  width: 100%;
-  padding: 8px;
-  font-size: 14px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-
-
-.save-btn {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.save-btn {
-  background-color: #4CAF50;
-  color: white;
-}
-
-/* Hover Effects */
-.save-btn:hover {
-  background-color: #45a049;
-}
-
 /*Estilos imagen*/
 img{
   width: 100px;
@@ -198,21 +130,3 @@ img{
   border-radius: 50%;
 }
 
-#previewImage{
-  margin-bottom: 5px;
-}
-
-
-.vistaPrevia{
-  width: 250px;
-  height: 250px;
-  border-radius: 0%;
-}
-
-
-/* Responsive Design */
-@media (max-width: 600px) {
-  .modal-content {
-    width: 90%;
-  }
-}
